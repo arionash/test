@@ -36,7 +36,6 @@ CREATE TABLE sales (
     quantity INTEGER,
     total_amount REAL,
     sale_date TEXT,
-    region TEXT,
     FOREIGN KEY (product_id) REFERENCES products(id),
     FOREIGN KEY (customer_id) REFERENCES customers(id),
     FOREIGN KEY (sales_rep_id) REFERENCES sales_reps(id)
@@ -63,8 +62,8 @@ INSERT INTO sales_reps (name, region) VALUES
 
 -- Sample sales records
 INSERT INTO sales (product_id, customer_id, sales_rep_id, quantity, total_amount, sale_date) VALUES
-(1, 1, 1, 5, 1495.00, '2025-05-10', 'North America'),
-(2, 2, 2, 2, 1998.00, '2025-05-15', 'Europe'),
-(3, 3, 3, 10, 990.00, '2025-04-01', 'Asia'),
-(1, 4, 1, 1, 299.00, '2025-05-20', 'North America'),
-(3, 1, 1, 3, 297.00, '2025-05-25', 'North America');
+(1, 1, 1, 5, 1495.00, '2025-05-10'),
+(2, 2, 2, 2, 1998.00, '2025-05-15'),
+(3, 3, 3, 10, 990.00, '2025-04-01'),
+(1, 4, 1, 1, 299.00, '2025-05-20'),
+(3, 1, 1, 3, 297.00, '2025-05-25');
